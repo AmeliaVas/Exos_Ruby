@@ -1,12 +1,14 @@
-print "Année de naissance : "
+print "Quel âge as-tu ? > "
 naissance = gets.chomp.to_i 
+age = 0
+n = naissance
 
-naissance.upto(2020) { |a|
-age = a - naissance
-
-if age == ((2020 - naissance) / 2)
-	puts "En #{a}, tu avais la moitié de l'âge que tu as aujourd'hui."
+naissance.times {
+if age == (naissance / 2)
+	puts "Il y a #{age} ans, tu avais la moitié de l'âge que tu as aujourd'hui."
 else 
-	puts "En #{a}, tu avais #{age} an(s)."
+	puts "Il y a #{n} ans tu avais #{age} an(s)."
 end
+n = n - 1
+age = age + 1
 }
