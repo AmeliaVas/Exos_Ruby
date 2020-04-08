@@ -3,8 +3,6 @@ print "> "
 etage = gets.chomp.to_i 
 puts "Voici la pyramide :"
 1.upto(etage) do |n|
-	etage.times {print " "}
-	etage = etage - 1
-    n.times { print "#" }
+    print ("#" * n).rjust(etage)
     puts
 end
